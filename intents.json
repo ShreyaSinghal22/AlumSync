@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "good evening"],
+      "responses": ["Hey there! How can I help you today?", "Hello! How’s it going?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "see you", "goodbye", "exit"],
+      "responses": ["Bye! Have a great day!", "See you soon!"]
+    },
+    {
+      "tag": "register_alumni",
+      "patterns": ["how can i register", "register alumni", "add alumni details"],
+      "responses": ["You can register by providing your name, department, and graduation year."]
+    },
+    {
+      "tag": "find_alumni",
+      "patterns": ["find alumni", "search alumni", "connect with alumni"],
+      "responses": ["Sure! Tell me the skill or field you want to find alumni in."]
+    },
+    {
+      "tag": "faq_events",
+      "patterns": ["upcoming events", "alumni meet", "events"],
+      "responses": ["The next alumni meet is scheduled soon! Stay tuned for updates."]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": ["I’m not sure about that, could you please rephrase?"]
+    }
+  ]
+}
