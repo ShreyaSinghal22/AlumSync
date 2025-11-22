@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router();
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../.env");
@@ -20,7 +19,7 @@ const alumniSignupbody = zod.object({
   mustBeVerified: zod.boolean()
 });
 
-router.post("alumni/signup", async (req,res)=>{
+const alumniSignup = async (req, res) => {
     const {success} = alumniSignupbody.safeParse(req.body)
     if(!success){
         return res.status(400).json({message: "Invalid request data"});
@@ -55,7 +54,9 @@ router.post("alumni/signup", async (req,res)=>{
     res.json({
         msg: "user created",
         token: token
-    })
+    }); 
 
-
-});
+   module.exports = {
+    alumnisignup
+};
+};
