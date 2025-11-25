@@ -7,6 +7,7 @@ const { Counter } = require("../../schemas/countermodel");
 const getNextAlumniId = require("../../schemas/countermodel");
 
 
+
 const alumniSignupbody = zod.object({
   alumniId: zod.number().int().nonnegative(),
   name: zod.string().min(1),    
@@ -14,19 +15,20 @@ const alumniSignupbody = zod.object({
   passwordHash: zod.string().min(8),
   batch: zod.string().min(1),
   department: zod.string().min(1),
-  phone: zod.string().min(10).max(15),
+  phone: zod.string().min(10),
   currentCompany: zod.string().min(1),
-  mustBeVerified: zod.boolean()
+  verified: zod.boolean(),
+  createdAt: zod.date()
 });
 
 const alumniSignup = async (req, res) => {
-    const {success} = alumniSignupbody.safeParse(req.body)
-    if(!success){
+    const result = alumniSignupbody.safeParse(req.body)
+    if(!result.success){
         return res.status(400).json({message: "Invalid request data"});
     }
     
-    const existingUser = await alumni.find({
-        username: req.body.username
+    const existingUser = await alumni.findOne({
+        email: req.body.email
     })
 
     if(existingUser) {
@@ -58,5 +60,6 @@ const alumniSignup = async (req, res) => {
 
    module.exports = {
     alumnisignup
-};
+   } 
+
 };
