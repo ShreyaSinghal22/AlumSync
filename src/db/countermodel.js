@@ -7,13 +7,13 @@ const counterSchema = new mongoose.Schema({
 
 export const Counter = mongoose.model("Counter", counterSchema);
 
-async function getNextAlumniId() {
+async function getNextId() {
   const counter = await Counter.findOneAndUpdate(
-    { name: "alumniId" },
+    { name: "Id" },
     { $inc: { value: 1 } },
     { new: true, upsert: true }
   );
 
   return counter.value; 
 }
-export default getNextAlumniId;
+export default getNextId;

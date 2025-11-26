@@ -3,7 +3,7 @@ const AlumniRouter = require("./Alumni");
 const AdminRouter = require("./Admin")
 
 const router = express.Router();
-router.use('/Alumni',AlumniRouter)
-router.use('/Admin',AdminRouter)
+router.use('/alumni',AlumniRouter)
+router.use('/admin',AdminRouter)
 
 module.exports = router;

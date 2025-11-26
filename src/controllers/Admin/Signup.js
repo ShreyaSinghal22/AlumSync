@@ -3,8 +3,8 @@ const zod = require("zod");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../.env");
 const { Admin } = require("../../models/Admin");
-const { Counter } = require("../../schemas/countermodel");
-const getNextAlumniId = require("../../schemas/countermodel");
+const { Counter } = require("../../db/countermodel");
+const getNextId = require("../../db/countermodel");
 
 
 const adminsignupbody = zod.object({
@@ -32,19 +32,31 @@ const adminSignup = async (req, res) => {
         })
     }
 
-    const adminId = await getNextAlumniId();
+    const adminId = await getNextId();
 
-    const admin = await Admin.create({
-        adminId: adminId,
-        name: req.body.name,
-        email: req.body.email,
-        passwordHash: req.body.passwordHash,
-        role: req.body.role
-    });
+    try{
+        const admin = await Admin.create({
+            adminId: adminId,
+            name: req.body.name,
+            email: req.body.email,
+            passwordHash: req.body.passwordHash,
+            role: req.body.role,
+            createdAt: req.body.createdAt
+        });
 
-    const token = jwt.sign({adminId}, JWT_SECRET);
-    res.json({
-        msg: "admin user created",
-        token: token
-    });
+        const token = jwt.sign({adminId}, JWT_SECRET);
+
+        res.json({
+            msg: "admin user created",
+            token: token
+        });
+
+    } catch (error){
+        return res.status(500).json({message: "Error creating admin user"});
+    }
+
+    module.exports = {
+    adminSignup             
+    }
+
 }
