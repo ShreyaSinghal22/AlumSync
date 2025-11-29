@@ -1,8 +1,6 @@
 const express = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = require("../.env");
-const { Admin } = require("../../models/Admin");
 const { Counter } = require("../../db/countermodel");
 const getNextId = require("../../db/countermodel");
 
@@ -55,8 +53,9 @@ const adminSignup = async (req, res) => {
         return res.status(500).json({message: "Error creating admin user"});
     }
 
-    module.exports = {
-    adminSignup             
-    }
+   exports.adminSignup = (req, res) => {
+    res.send("Admin signup working");
+   };
+
 
 }

@@ -1,8 +1,6 @@
-const express = require('express');
+const express = require("express");
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = require("../.env");
-const { Alumni } = require("../../models/Alumni");
 const { Counter } = require("../../db/countermodel");
 const getNextId = require("../../db/countermodel");
 
@@ -65,8 +63,9 @@ const alumniSignup = async (req, res) => {
     } 
     
 
-   module.exports = {
-    alumnisignup
-   } 
+   exports.alumniSignup = (req, res) => {
+    res.send("Alumni signup working");
+   };
+
 
 };

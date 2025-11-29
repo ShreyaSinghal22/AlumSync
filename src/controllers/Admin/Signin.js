@@ -1,8 +1,7 @@
 const express = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = require("../.env");
-const { Admin } = require("../../models/Admin"); 
+
 
 const signinbody = zod.object({
     name: zod.string().min(1),
@@ -43,6 +42,6 @@ const adminSignin = ("/signin", async (req,res) => {
 
 });
 
-module.exports = {
-    adminSignin
-}
+exports.adminSignin = (req, res) => {
+  res.send("Admin signin working");
+};
