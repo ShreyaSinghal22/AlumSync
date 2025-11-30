@@ -1,8 +1,8 @@
-const express = require('express');
+const express  = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { Counter } = require("../../db/countermodel");
-const getNextId = require("../../db/countermodel");
+const { Counter, getNextId } = require('../../db/countermodel');
+
 
 
 
@@ -58,9 +58,7 @@ const studentSignup = async (req, res) => {
         return res.status(500).json({message: "Error creating student user"});
     }
 
-   exports.studentSignup = (req, res) => {
-    res.send("student signup working");
-   };
-
 
 };
+
+   module.exports = { studentSignup };

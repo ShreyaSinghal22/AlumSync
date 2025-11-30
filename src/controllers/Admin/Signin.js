@@ -42,6 +42,4 @@ const adminSignin = ("/signin", async (req,res) => {
 
 });
 
-exports.adminSignin = (req, res) => {
-  res.send("Admin signin working");
-};
+module.exports = { adminSignin };

@@ -1,8 +1,8 @@
-const express = require('express');
+const express  = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { Counter } = require("../../db/countermodel");
-const getNextId = require("../../db/countermodel");
+const { Counter, getNextId } = require('../../db/countermodel');
+
 
 
 const adminsignupbody = zod.object({
@@ -53,9 +53,7 @@ const adminSignup = async (req, res) => {
         return res.status(500).json({message: "Error creating admin user"});
     }
 
-   exports.adminSignup = (req, res) => {
-    res.send("Admin signup working");
-   };
 
+};
 
-}
+   module.exports = { adminSignup };
