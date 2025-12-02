@@ -2,13 +2,12 @@ const express  = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
 const { Counter, getNextId } = require('../../db/countermodel');
-
-
+const { studentSchema } = require('../../../models/Student');
 
 
 const studentSignupbody = zod.object({
   studentId: zod.number().int().nonnegative(),
-  name: zod.string().min(1),    
+  username: zod.string().min(1),    
   email: zod.string().email(),
   passwordHash: zod.string().min(8),
   batch: zod.string().min(1),
@@ -38,7 +37,7 @@ const studentSignup = async (req, res) => {
     try {
         const student = await student.create({
             studentId: studentId,
-            name: req.body.name,
+            username: req.body.username,
             email: req.body.email,
             passwordHash: req.body.passwordHash,
             batch: req.body.batch,

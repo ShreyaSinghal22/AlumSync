@@ -1,46 +1,6 @@
-
-const updatebody = zod.object({
-    password: zod.string().optional(),
-    name: zod.string().optional(),
-})
-
-const updateadmin = ("/admin" , authMiddleware, async(req,res)=>{
-    const result = updatebody.safeParse(req.body)
-    if (!result.success) {
-        res.status(411).json({
-            msg: "error while updating the information"
-        })
-    }
-
-    await Admin.updateOne(req.body, {
-        adminId: req.adminId
-    })
-
-    res.json({
-        msg: "updated successfully"
-    })
-
-})
-
-const getadmin = ("/bulk" , async(req,res)=>{
-    const filter = req.query.filter || "";
-
-    const admins = await Admin.find({
-        $or: [{
-            name: {
-                "$regex": filter
-            }
-        }]
-    })
-
-    res.json({
-        admin: admins.map(admin => ({
-            name: admin.adminname,
-            adminId: adminId
-        }))
-    })
-    
-})
+const express = require('express');
+const { adminSchema } = require('../../../models/Admin');
+const authMiddleware = require('../../../middlewares/authMiddleware');
 
 const adminsignout = ("/signout", authMiddleware, async(req,res)=>{
     try{
@@ -61,7 +21,5 @@ const adminsignout = ("/signout", authMiddleware, async(req,res)=>{
 })
 
 module.exports = {
-    updateadmin,
-    getadmin,
     adminsignout
 }

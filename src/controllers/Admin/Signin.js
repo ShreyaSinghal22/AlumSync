@@ -1,10 +1,11 @@
 const express = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
+const { adminSchema } = require('../../../models/Admin');
 
 
 const signinbody = zod.object({
-    name: zod.string().min(1),
+    username: zod.string().min(1),
     password: zod.string(),
     email: zod.string().min(8).email()
 })
@@ -20,7 +21,7 @@ const adminSignin = ("/signin", async (req,res) => {
    }
 
     const user = await User.findOne({
-        name: req.body.username,
+        username: req.body.username,
         password: req.body.password,
         email: req.body.email
     })

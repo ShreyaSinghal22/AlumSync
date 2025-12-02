@@ -2,12 +2,13 @@ const express  = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
 const { Counter, getNextId } = require('../../db/countermodel');
+const { adminSchema } = require('../../../models/Admin');
 
 
 
 const adminsignupbody = zod.object({
     adminId: zod.number().int().nonnegative(),
-    name: zod.string().min(1),
+    username: zod.string().min(1),
     email: zod.string().email(),
     passwordHash: zod.string().min(8),
     role: zod.string().min(1),
@@ -35,7 +36,7 @@ const adminSignup = async (req, res) => {
     try{
         const admin = await Admin.create({
             adminId: adminId,
-            name: req.body.name,
+            username: req.body.username,
             email: req.body.email,
             passwordHash: req.body.passwordHash,
             role: req.body.role,
