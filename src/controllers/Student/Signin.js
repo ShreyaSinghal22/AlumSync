@@ -1,7 +1,7 @@
 const express = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { alumniSchema } = require('../../../models/Alumni');
+const { studentSchema } = require('../../../models/Student');
 
 
 const signinbody = zod.object({
@@ -12,7 +12,7 @@ const signinbody = zod.object({
 
 
 
-const alumniSignin = ("/signin", async (req,res) => {
+const studentSignin = ("/signin", async (req,res) => {
    const result = signinbody.safeParse(req.body)
    if(!result.success) {
     res.status(411).json({
@@ -43,4 +43,4 @@ const alumniSignin = ("/signin", async (req,res) => {
 
 });
 
-module.exports = { alumniSignin };
+module.exports = { studentSignin };

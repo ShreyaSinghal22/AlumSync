@@ -1,3 +1,6 @@
+const zod = require("zod");
+const { Admin } = require("../../../models/Admin");
+const authMiddleware = require("../../../middlewares/authMiddleware");
 
 const updatebody = zod.object({
     password: zod.string().optional(),
