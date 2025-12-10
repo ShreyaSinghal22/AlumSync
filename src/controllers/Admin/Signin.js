@@ -1,10 +1,12 @@
 const express = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-
+const { AdminSchema } = require('@models/Admin');
+const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
+const bcrypt = require('bcryptjs');
 
 const signinbody = zod.object({
-    name: zod.string().min(1),
+    username: zod.string().min(1),
     password: zod.string(),
     email: zod.string().min(8).email()
 })
@@ -12,33 +14,54 @@ const signinbody = zod.object({
 
 
 const adminSignin = ("/signin", async (req,res) => {
-   const result = signinbody.safeParse(req.body)
+   try {
+    const result = signinbody.safeParse(req.body)
    if(!result.success) {
     res.status(411).json({
         msg: "Incrorrect inputs"
     })
    }
 
-    const user = await User.findOne({
-        name: req.body.username,
+    const admin = await Admin.findOne({
+        username: req.body.username,
         password: req.body.password,
         email: req.body.email
     })
 
-    if(user) {
-        const token = jwt.sign({
-            adminId: adminId
-        }, JWT_SECRET);
-
-        res.json({
-            token: token
-        })
-        return;
+    if (!admin) {
+      return res.status(401).json({
+        success: false,
+        error: 'Invalid credentials'
+      });
     }
 
-    res.status(411).json({
+    const isPasswordValid = await bcrypt.compare(password, admin.password);
+
+    if (!isPasswordValid) {
+      return res.status(401).json({
+        success: false,
+        error: 'Invalid credentials'
+      });
+    }
+
+    
+    const token = jwt.sign(
+    { adminId: admin._id },  
+    JWT_ACCESS_SECRET,
+    { expiresIn: "7d" }
+    );
+
+    res.status(200).json({
+      success: true,
+      message: 'Login successful',
+      token,
+    });
+
+ } catch (error) {
+        res.status(411).json({
         message: "Error while logging in"
-    })
+    });
+ }
 
 });
 

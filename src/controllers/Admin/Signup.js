@@ -1,16 +1,17 @@
 const express  = require('express');
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { Counter, getNextId } = require('../../db/countermodel');
-
+const bcrypt = require('bcryptjs');
+const { AdminSchema } = require('@models/Admin');
+const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
 
 
 const adminsignupbody = zod.object({
-    adminId: zod.number().int().nonnegative(),
-    name: zod.string().min(1),
+    username: zod.string().min(1),
     email: zod.string().email(),
-    passwordHash: zod.string().min(8),
+    password: zod.string().min(8),
     role: zod.string().min(1),
+    fullname: zod.string().min(3),
     createdAt: zod.date()
 });
 
@@ -30,23 +31,36 @@ const adminSignup = async (req, res) => {
         })
     }
 
-    const adminId = await getNextId();
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
 
     try{
         const admin = await Admin.create({
-            adminId: adminId,
-            name: req.body.name,
-            email: req.body.email,
-            passwordHash: req.body.passwordHash,
-            role: req.body.role,
-            createdAt: req.body.createdAt
+            username,
+            email,
+            password: hashedPassword,
+            fullname,
+            role,
+            createdAt
         });
 
-        const token = jwt.sign({adminId}, JWT_SECRET);
+        const token = jwt.sign(
+            { adminId: admin._id },    
+            JWT_ACCESS_SECRET,
+            { expiresIn: "7d" } 
+        );
 
         res.json({
             msg: "admin user created",
-            token: token
+            token: token,
+            admin: {
+                id: admin._id,
+                username: admin.username,
+                email: admin.email,
+                fullName: admin.fullName,
+                role: admin.role,
+            }
         });
 
     } catch (error){
