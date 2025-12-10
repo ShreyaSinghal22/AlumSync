@@ -1,5 +1,5 @@
 const express = require('express');
-const { Admin } = require('../../../models/Admin');
+const { Admin } = require('@models/Admin');
 
 
 
@@ -17,7 +17,7 @@ const getadmin = ("/bulk" , async(req,res)=>{
     res.json({
         admin: admins.map(admin => ({
             name: admin.adminname,
-            adminId: adminId
+            adminId: admin._id
         }))
     })
     

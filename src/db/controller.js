@@ -1,14 +1,15 @@
 
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 
-
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://sanskritirajrathor:sanskriti2210@cluster0.2yeyhwc.mongodb.net/test';
+const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
 
 
 const connectDB = async () => {
     try {
         // Attempt to connect to the MongoDB URI
-        const connection = await mongoose.connect(MONGO_URI, {
+        const connection = await mongoose.connect(MONGODB_CONNECTION_STRING, {
             // Recommended Mongoose options for the latest driver
             useNewUrlParser: true,
             useUnifiedTopology: true,

@@ -1,4 +1,4 @@
-const Admin = require('../'); // Adjust path to your Admin model
+const AdminSchema = require('../models/Admin'); // Adjust path to your Admin model
 
 /**
  * Middleware to check if user is Admin

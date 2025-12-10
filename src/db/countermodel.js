@@ -10,7 +10,7 @@ const Counter = mongoose.model("Counter", counterSchema);
 
 async function getNextId() {
   const counter = await Counter.findOneAndUpdate(
-    { name: "Id" },
+    { name: "id" },
     { $inc: { value: 1 } },
     { new: true, upsert: true }
   );
