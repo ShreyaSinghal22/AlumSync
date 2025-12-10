@@ -1,0 +1,66 @@
+{
+  "intents": [
+    {
+      "intent": "recommend_skill_path",
+      "samples": [
+        "Which skill should I learn?",
+        "Recommend a skill path"
+      ],
+      "responses": [
+        "Here are some recommended skill paths:"
+      ]
+    },
+    {
+      "intent": "skill_learning_resources",
+      "samples": [
+        "Resources for AI",
+        "Learning materials for web dev"
+      ],
+      "responses": [
+        "Here are the best learning resources:"
+      ],
+      "entities": [
+        "skill"
+      ]
+    },
+    {
+      "intent": "skill_roadmap_summary",
+      "samples": [
+        "Roadmap for AI",
+        "Give Java roadmap"
+      ],
+      "responses": [
+        "Here is the skill roadmap:"
+      ],
+      "entities": [
+        "skill"
+      ]
+    },
+    {
+      "intent": "project_ideas_for_skill",
+      "samples": [
+        "Project ideas for Java",
+        "ML project ideas"
+      ],
+      "responses": [
+        "Here are project ideas you can build:"
+      ],
+      "entities": [
+        "skill"
+      ]
+    },
+    {
+      "intent": "career_roles_for_skill",
+      "samples": [
+        "Roles in AI",
+        "Career paths for Data Science"
+      ],
+      "responses": [
+        "Here are major career roles in this skill:"
+      ],
+      "entities": [
+        "skill"
+      ]
+    }
+  ]
+}

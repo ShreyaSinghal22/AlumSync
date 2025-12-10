@@ -1,0 +1,75 @@
+{
+  "intents": [
+    {
+      "intent": "greet",
+      "samples": [
+        "Hello",
+        "Hi",
+        "Hey"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?"
+      ]
+    },
+    {
+      "intent": "goodbye",
+      "samples": [
+        "Bye",
+        "Goodbye"
+      ],
+      "responses": [
+        "Goodbye! Take care."
+      ]
+    },
+    {
+      "intent": "thank_you",
+      "samples": [
+        "Thanks",
+        "Thank you"
+      ],
+      "responses": [
+        "You're welcome!"
+      ]
+    },
+    {
+      "intent": "bot_introduction",
+      "samples": [
+        "Who are you?",
+        "What can you do?"
+      ],
+      "responses": [
+        "I\u2019m the AMES chatbot, here to assist you."
+      ]
+    },
+    {
+      "intent": "fallback",
+      "samples": [
+        "asdhjk",
+        "nonsense input"
+      ],
+      "responses": [
+        "I didn\u2019t quite get that. Could you rephrase it?"
+      ]
+    },
+    {
+      "intent": "clarification_needed",
+      "samples": [
+        "Explain again",
+        "What do you mean?"
+      ],
+      "responses": [
+        "Let me clarify that for you."
+      ]
+    },
+    {
+      "intent": "session_reset",
+      "samples": [
+        "Reset conversation",
+        "Start over"
+      ],
+      "responses": [
+        "Session reset. How can I assist now?"
+      ]
+    }
+  ]
+}

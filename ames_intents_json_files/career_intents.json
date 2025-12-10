@@ -1,0 +1,134 @@
+{
+  "intents": [
+    {
+      "intent": "get_latest_jobs",
+      "samples": [
+        "Show me latest jobs",
+        "Any new jobs available?"
+      ],
+      "responses": [
+        "Here are the latest job opportunities:"
+      ],
+      "required_attributes": [
+        "title",
+        "company",
+        "location",
+        "skills_required"
+      ]
+    },
+    {
+      "intent": "get_internships",
+      "samples": [
+        "Show internships",
+        "Any internships available?"
+      ],
+      "responses": [
+        "Here are the available internships:"
+      ],
+      "required_attributes": [
+        "title",
+        "company",
+        "duration",
+        "skills_required"
+      ]
+    },
+    {
+      "intent": "get_jobs_by_skill",
+      "samples": [
+        "Jobs for Python developers",
+        "Show jobs for React"
+      ],
+      "responses": [
+        "Here are jobs related to this skill:"
+      ],
+      "entities": [
+        "skill"
+      ]
+    },
+    {
+      "intent": "get_jobs_by_location",
+      "samples": [
+        "Jobs in Bangalore",
+        "Jobs in Delhi"
+      ],
+      "responses": [
+        "Here are jobs in that location:"
+      ],
+      "entities": [
+        "location"
+      ]
+    },
+    {
+      "intent": "get_mentors",
+      "samples": [
+        "Show me mentors",
+        "I need mentorship"
+      ],
+      "responses": [
+        "Here are the available mentors:"
+      ],
+      "required_attributes": [
+        "name",
+        "profession",
+        "skills",
+        "availability"
+      ]
+    },
+    {
+      "intent": "get_mentors_by_skill",
+      "samples": [
+        "Mentors for AI",
+        "Mentor skilled in Java"
+      ],
+      "responses": [
+        "Here are mentors with that skill:"
+      ],
+      "entities": [
+        "skill"
+      ]
+    },
+    {
+      "intent": "upcoming_career_events",
+      "samples": [
+        "Show career events",
+        "Any webinars coming up?"
+      ],
+      "responses": [
+        "Here are the upcoming career events:"
+      ]
+    },
+    {
+      "intent": "resume_help",
+      "samples": [
+        "Resume tips",
+        "How to improve resume?"
+      ],
+      "responses": [
+        "Here are resume-building tips:"
+      ]
+    },
+    {
+      "intent": "interview_tips",
+      "samples": [
+        "Interview tips",
+        "How to crack interviews?"
+      ],
+      "responses": [
+        "Here are some interview tips:"
+      ]
+    },
+    {
+      "intent": "job_application_deadline",
+      "samples": [
+        "Deadline for this job?",
+        "Is application still open?"
+      ],
+      "responses": [
+        "Here is the application deadline:"
+      ],
+      "entities": [
+        "opportunity_id"
+      ]
+    }
+  ]
+}

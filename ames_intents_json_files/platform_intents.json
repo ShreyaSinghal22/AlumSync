@@ -1,0 +1,159 @@
+{
+  "intents": [
+    {
+      "intent": "navigate_home",
+      "samples": [
+        "Go to home page",
+        "Open home",
+        "Main page please"
+      ],
+      "responses": [
+        "Redirecting you to the home page."
+      ]
+    },
+    {
+      "intent": "navigate_login",
+      "samples": [
+        "Open login",
+        "I want to login",
+        "Take me to login page"
+      ],
+      "responses": [
+        "Opening the login page."
+      ]
+    },
+    {
+      "intent": "navigate_register",
+      "samples": [
+        "Open registration",
+        "How to register?",
+        "Take me to signup"
+      ],
+      "responses": [
+        "Here is the registration page."
+      ]
+    },
+    {
+      "intent": "navigate_profile",
+      "samples": [
+        "Open my profile",
+        "Go to profile",
+        "Show profile"
+      ],
+      "responses": [
+        "Opening your profile."
+      ]
+    },
+    {
+      "intent": "navigate_alumni_directory",
+      "samples": [
+        "Open alumni directory",
+        "Search alumni",
+        "Show alumni list"
+      ],
+      "responses": [
+        "Opening the alumni directory."
+      ]
+    },
+    {
+      "intent": "navigate_events",
+      "samples": [
+        "Open events",
+        "Show event list"
+      ],
+      "responses": [
+        "Here are the upcoming events."
+      ]
+    },
+    {
+      "intent": "navigate_jobs",
+      "samples": [
+        "Open jobs list",
+        "Show job postings"
+      ],
+      "responses": [
+        "Opening the job postings section."
+      ]
+    },
+    {
+      "intent": "navigate_internships",
+      "samples": [
+        "Open internships",
+        "Show internships"
+      ],
+      "responses": [
+        "Here are the available internships."
+      ]
+    },
+    {
+      "intent": "navigate_donations",
+      "samples": [
+        "Open donations",
+        "Show donation page"
+      ],
+      "responses": [
+        "Opening the donation section."
+      ]
+    },
+    {
+      "intent": "navigate_feed",
+      "samples": [
+        "Open feed",
+        "Show community feed"
+      ],
+      "responses": [
+        "Opening the community feed."
+      ]
+    },
+    {
+      "intent": "navigate_support",
+      "samples": [
+        "Open support",
+        "I need help"
+      ],
+      "responses": [
+        "Opening the support section."
+      ]
+    },
+    {
+      "intent": "platform_features_overview",
+      "samples": [
+        "Platform features",
+        "What can I do here?"
+      ],
+      "responses": [
+        "Here are the main features of the AMES platform:"
+      ]
+    },
+    {
+      "intent": "how_to_post_job",
+      "samples": [
+        "How do I post a job?",
+        "Process for posting a job"
+      ],
+      "responses": [
+        "Here is how you can post a job:"
+      ]
+    },
+    {
+      "intent": "how_to_register_event",
+      "samples": [
+        "How to register for event?",
+        "Event registration steps"
+      ],
+      "responses": [
+        "Here is how you register for events:"
+      ]
+    },
+    {
+      "intent": "how_to_edit_profile",
+      "samples": [
+        "How to edit my profile?",
+        "Update profile steps"
+      ],
+      "responses": [
+        "Here\u2019s how to edit your profile:"
+      ]
+    }
+  ]
+}
