@@ -1,39 +1,47 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const alumniSchema = new mongoose.Schema({
-  alumniId: {
-    type: String,
-    required: true,
-    unique: true
-  },
+const AlumniSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    index: true
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    index: true
   },
   passwordHash: {
     type: String,
     required: true
   },
+  interest: [{
+    name: {type: String},
+    category: {
+      type: String,
+      enum: ["Professional", "Hobby", "Skill"],
+      default: "Professional"
+    }
+  }],
   batch: {
-    type: String
+    type: String,
+    index: true
   },
   department: {
-    type: String
+    type: String,
+    index: true
   },
   phone: {
     type: String
   },
   currentCompany: {
-    type: String
+    type: String,
+    index: true
   },
   verified: {
     type: Boolean,
-    default: "false"
+    default: false
   },
   createdAt: {
     type: Date,
@@ -41,4 +49,6 @@ const alumniSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-export default mongoose.model("Alumni", alumniSchema);
+AlumniSchema.index({ name: "text", email: "text", department: "text", currentcompany: "text"});
+
+module.exports = mongoose.model("Alumni", AlumniSchema);
