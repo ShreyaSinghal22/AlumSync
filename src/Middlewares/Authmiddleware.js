@@ -32,7 +32,7 @@ const authenticateToken = async (req, res, next) => {
 
     // Attach user info to request object
     req.userId = decoded.sub;
-    req.userRole = decoded.role; // 'admin', 'alumni', or 'student'
+    req.userRole = decoded.role;
     
     next();
   } catch (error) {

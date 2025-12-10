@@ -41,7 +41,7 @@ const adminSignup = async (req, res) => {
             email,
             password: hashedPassword,
             fullname,
-            role: 'admin',
+            role,
             createdAt
         });
 

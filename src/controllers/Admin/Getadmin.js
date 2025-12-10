@@ -16,7 +16,7 @@ const getadmin = ("/bulk" , async(req,res)=>{
 
     res.json({
         admin: admins.map(admin => ({
-            name: admin.adminname,
+            name: admin.name,
             adminId: admin._id
         }))
     })
