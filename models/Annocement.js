@@ -1,8 +1,6 @@
-import mongoose from "mongoose";
-import { useRef } from "react";
-import Admin from "./Admin";
+const mongoose = require("mongoose");
 
-const announcementSchema = new mongoose.Schema(
+const AnnouncementSchema = new mongoose.Schema(
   {
     announcementId: {
       type: String,
@@ -11,27 +9,26 @@ const announcementSchema = new mongoose.Schema(
     },
     title: {
         type: String,
-        required: true
+        required: true,
+        index: true
     },
     content: {
       type: String,
       required: true
     },
     scheduledDate: {
-        type: Date.now
+        type: Date,
+        default: null
     },
     createdby: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref: "Admin"
+        ref: "Admin",
+        index: true
     },
-    createdAt: {
-      type: Date,
-      required: true,
-      default: Date.now
-    }
   },
-  { timestamps: false }
+  { timestamps: true }
 );
 
-export default mongoose.model("Announcement", announcementSchema);
+AnnouncementSchema.index({title: "text",scheduledDate: 1});
+module.exports = mongoose.model("Announcement", AnnouncementSchema);
