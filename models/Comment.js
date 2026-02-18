@@ -1,30 +1,44 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const commentSchema = new mongoose.Schema(
   {
     commentId: {
-      type: Number,
+      type: String,
       required: true,
       unique: true
     },
     authorId: {
-      type: Number,
-      required: true
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      refPath: "authorModel"
     },
-    postId: {
-      type: Number,
-      required: true
+    authorModel: {
+      type: String,
+      required: true,
+      enum: ["Admin", "Alumni", "Student"]
+    },
+    post: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Feed",
+      default: null
+    },
+    event: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Event",
+      default: null
+    },
+    likes: {
+      type: mongoose.Schema.Types.ObjectId,
+      refPath: "authorModel"
     },
     content: {
       type: String,
-      required: true
+      required: true,
+      index: true
     },
-    createdAt: {
-      type: Date,
-      default: Date.now
-    }
   },
-  { timestamps: false }
+  { timestamps: true }
 );
 
-export default mongoose.model("Comment", commentSchema);
+commentSchema.index ({content: "text"});
+module.exports = mongoose.model("Comment", commentSchema);
