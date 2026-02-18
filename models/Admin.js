@@ -1,36 +1,41 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const adminSchema = new mongoose.Schema(
+const AdminSchema = new mongoose.Schema(
   {
-    adminId: {
-      type: String,
-      required: true,
-      unique: true
-    },
-    name: {
+    fullname: {
         type: String,
         required: true,
+        index: true
     },
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        index: true
     },
     passwordHash: {
     type: String,
     required: true
     },
     role: {
-    type: Enumerator,
+    type: String,
+    enum: ["superadmin", "admin", "moderator"],
     required: true,
-    default: "Admin"
+    default: "admin"
     },
     createdAt: {
       type: Date,
       default: Date.now
+    },
+    phone: {
+      type: String
+    },
+    verified: {
+      type: Boolean,
+      default: true
     }
   },
-  { timestamps: false }
+  { timestamps: true }
 );
-
-export default mongoose.model("Admin", adminSchema);
+AdminSchema.index({ fullnamename: "text", email: "text"});
+module.exports = mongoose.model("Admin", AdminSchema);
