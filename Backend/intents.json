@@ -1,0 +1,184 @@
+{
+  "intents": [
+    {
+      "tag": "greet",
+      "patterns": ["Hello", "Hi", "Hey", "START"],
+      "responses": ["Hello! Welcome to AMES. I am ALMA, your virtual assistant. Please select an option from the Main Menu:"],
+      "options": ["Introduction", "Platform Navigation", "Platform Guidance", "Career & Skill Guidance", "Career Preparation"]
+    },
+    {
+      "tag": "bot_introduction",
+      "patterns": ["Introduction", "Who are you?"],
+      "responses": ["I am the AMES virtual assistant. I help users navigate the platform, explore career guidance, and connect with alumni resources."],
+      "options": ["Main Menu"]
+    },
+    {
+      "tag": "main_menu",
+      "patterns": ["Main Menu", "Back to Main Menu"],
+      "responses": ["Returning to the Main Menu. What would you like to explore?"],
+      "options": ["Introduction", "Platform Navigation", "Platform Guidance", "Career & Skill Guidance", "Career Preparation"]
+    },
+    {
+      "tag": "Platform-Navigation",
+      "patterns": ["Platform Navigation", "navigate"],
+      "responses": ["Select a destination within the Platform Navigation sub-menu:"],
+      "options": ["Home", "Login", "Register", "Profile", "Alumni Directory", "Events", "Jobs", "Internships", "Donations", "Feed", "Support", "Main Menu"]
+    },
+    {
+      "tag": "navigate_home",
+      "patterns": ["Home"],
+      "responses": ["Redirecting you to the home page."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_login",
+      "patterns": ["Login"],
+      "responses": ["Opening the login page."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_register",
+      "patterns": ["Register"],
+      "responses": ["Redirecting you to the registration page."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_profile",
+      "patterns": ["Profile"],
+      "responses": ["Opening your profile page."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_alumni_directory",
+      "patterns": ["Alumni Directory"],
+      "responses": ["Opening the alumni directory."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_events",
+      "patterns": ["Events"],
+      "responses": ["Here are the upcoming events."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_jobs",
+      "patterns": ["Jobs"],
+      "responses": ["Opening the job postings section."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_internships",
+      "patterns": ["Internships"],
+      "responses": ["Here are the available internship opportunities."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_donations",
+      "patterns": ["Donations"],
+      "responses": ["Opening the donation section."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_feed",
+      "patterns": ["Feed"],
+      "responses": ["Opening the community feed."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "navigate_support",
+      "patterns": ["Support"],
+      "responses": ["Opening the support section."],
+      "options": ["Back to Platform Navigation", "Main Menu"]
+    },
+    {
+      "tag": "Platform-Guidance",
+      "patterns": ["Platform Guidance"],
+      "responses": ["Select a topic from the Platform Guidance sub-menu:"],
+      "options": ["Features Overview", "Post a Job", "Register for Event", "Edit Profile", "Main Menu"]
+    },
+    {
+      "tag": "platform_features_overview",
+      "patterns": ["Features Overview"],
+      "responses": ["AMES provides features such as alumni networking, job postings, internships, event management, and career guidance."],
+      "options": ["Back to Platform Guidance", "Main Menu"]
+    },
+    {
+      "tag": "how_to_post_job",
+      "patterns": ["Post a Job"],
+      "responses": ["To post a job, go to the Jobs section, click on 'Post Job', and fill in the details."],
+      "options": ["Back to Platform Guidance", "Main Menu"]
+    },
+    {
+      "tag": "how_to_register_event",
+      "patterns": ["Register for Event"],
+      "responses": ["Navigate to the Events section, select an event, and click the Register button."],
+      "options": ["Back to Platform Guidance", "Main Menu"]
+    },
+    {
+      "tag": "how_to_edit_profile",
+      "patterns": ["Edit Profile"],
+      "responses": ["Go to your profile page, click 'Edit Profile', and update your information."],
+      "options": ["Back to Platform Guidance", "Main Menu"]
+    },
+    {
+      "tag": "Career-Skill-Guidance",
+      "patterns": ["Career & Skill Guidance"],
+      "responses": ["Select a resource from the Career & Skill Guidance sub-menu:"],
+      "options": ["Recommend Skill Path", "Learning Resources", "Roadmap Summary", "Project Ideas", "Career Roles", "Main Menu"]
+    },
+    {
+      "tag": "recommend_skill_path",
+      "patterns": ["Recommend Skill Path"],
+      "responses": ["Recommended paths include Web Development, AI, Data Science, and Cloud Computing."],
+      "options": ["Back to Career & Skill Guidance", "Main Menu"]
+    },
+    {
+      "tag": "skill_learning_resources",
+      "patterns": ["Learning Resources"],
+      "responses": ["You can find resources on platforms like Coursera, Udemy, and freeCodeCamp."],
+      "options": ["Back to Career & Skill Guidance", "Main Menu"]
+    },
+    {
+      "tag": "skill_roadmap_summary",
+      "patterns": ["Roadmap Summary"],
+      "responses": ["Roadmaps start with fundamentals, followed by practical projects and advanced concepts."],
+      "options": ["Back to Career & Skill Guidance", "Main Menu"]
+    },
+    {
+      "tag": "project_ideas_for_skill",
+      "patterns": ["Project Ideas"],
+      "responses": ["Ideas include portfolio websites, chatbots, and data analysis dashboards."],
+      "options": ["Back to Career & Skill Guidance", "Main Menu"]
+    },
+    {
+      "tag": "career_roles_for_skill",
+      "patterns": ["Career Roles"],
+      "responses": ["Roles include ML Engineer, Data Scientist, Researcher, and Software Developer."],
+      "options": ["Back to Career & Skill Guidance", "Main Menu"]
+    },
+    {
+      "tag": "Career-Preparation",
+      "patterns": ["Career Preparation"],
+      "responses": ["Select a preparation tool from the Career Preparation sub-menu:"],
+      "options": ["Resume Help", "Interview Tips", "Main Menu"]
+    },
+    {
+      "tag": "resume_help",
+      "patterns": ["Resume Help"],
+      "responses": ["Focus on highlighting your skills, projects, and relevant experience clearly."],
+      "options": ["Back to Career Preparation", "Main Menu"]
+    },
+    {
+      "tag": "interview_tips",
+      "patterns": ["Interview Tips"],
+      "responses": ["Practice coding problems, review core concepts, and improve your communication skills."],
+      "options": ["Back to Career Preparation", "Main Menu"]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": ["I'm sorry, I didn't understand that. Please select an option from the menu or contact support@alumsync.com."],
+      "options": ["Main Menu"]
+    }
+  ]
+}
