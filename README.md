@@ -1,0 +1,3 @@
+# AMES AI Chatbot
+
+The AMES AI Chatbot is developed for the Alumni Management and Engagement System to assist users in interacting with the platform more efficiently. It provides quick guidance for navigating different sections of the system and accessing useful information. The chatbot helps users with common career-related queries and offers suggestions for relevant skill development paths. It is designed to deliver structured responses through a menu-driven interface. The system aims to simplify user interaction and improve accessibility to important platform features. The chatbot is implemented using Python and Flask for the backend and standard web technologies for the frontend. It serves as an interactive support component within the AMES platform.
