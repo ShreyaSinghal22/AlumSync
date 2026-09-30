@@ -1,0 +1,548 @@
+{
+  "profile": {
+    "id": "u-001",
+    "name": "Riya Sharma",
+    "role": "B.Tech CSE — Pre-Final Year",
+    "university": "WIT Dehradun",
+    "batch": "Batch of 2027",
+    "avatar": "RS",
+    "stats": {
+      "connections": 142,
+      "profileViews": 38
+    }
+  },
+  "posts": [
+    {
+      "id": "p-1",
+      "author": "Rahul Kapoor",
+      "role": "SDE-1 @ Google",
+      "batch": "Class of '21",
+      "type": "referral",
+      "content": "Excited to share that we are hiring for Frontend roles! Feel free to reach out for referrals.",
+      "likes": 84,
+      "comments": 12,
+      "timestamp": "2h ago"
+    },
+    {
+      "id": "p-2",
+      "author": "Priya Sharma",
+      "role": "Product Manager @ Razorpay",
+      "batch": "Class of '19",
+      "type": "update",
+      "content": "Always a pleasure visiting the campus. The new AI lab looks promising!",
+      "likes": 156,
+      "comments": 24,
+      "timestamp": "5h ago"
+    },
+    {
+      "id": "p-3",
+      "author": "Placement Cell",
+      "role": "Official Update",
+      "batch": "Admin",
+      "type": "announcement",
+      "content": "📢 Reminder: The mock interviews for the 2025 batch start this Monday. Please check your emails for the schedule.",
+      "likes": 312,
+      "comments": 45,
+      "timestamp": "1d ago"
+    },
+    {
+      "id": "p-4",
+      "author": "Siddharth Das",
+      "role": "Data Analyst @ Zomato",
+      "batch": "Class of '22",
+      "type": "achievement",
+      "content": "Just completed 2 years at Zomato! Grateful for the mentorship from my seniors at IIIT Dehradun.",
+      "likes": 204,
+      "comments": 18,
+      "timestamp": "2d ago"
+    },
+    {
+      "id": "p-5",
+      "author": "Innovation Hub",
+      "role": "Campus Event",
+      "batch": "Admin",
+      "type": "event",
+      "content": "Join us for the 'Startup Pitch Night' tomorrow at 6 PM. Special guest: Alumni Founders from the 2015 batch!",
+      "likes": 89,
+      "comments": 7,
+      "timestamp": "3d ago"
+    },
+    {
+      "id": "p-6",
+      "author": "Karan Verma",
+      "role": "Graduate Student @ CMU",
+      "batch": "Class of '23",
+      "type": "poll",
+      "content": "Which tech stack should juniors focus on for 2025 placements? 1. MERN, 2. Java/Spring, 3. Python/AI.",
+      "likes": 420,
+      "comments": 102,
+      "timestamp": "4d ago"
+    }
+  ],
+  "stats": {
+    "activeListings": 840,
+    "companies": 340,
+    "referralsGiven": 78,
+    "myApplications": 6
+  },
+  "suggestions": [
+    {
+      "id": "s1",
+      "name": "Riya Patel",
+      "role": "Frontend Intern @ CRED",
+      "avatar": "RP"
+    },
+    {
+      "id": "s2",
+      "name": "Siddharth Das",
+      "role": "Data Analyst @ Zomato",
+      "avatar": "SD"
+    },
+    {
+      "id": "s3",
+      "name": "Neha Joshi",
+      "role": "UI/UX Designer",
+      "avatar": "NJ"
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "id": "e1",
+      "day": "15",
+      "month": "APR",
+      "title": "Annual Alumni Gala",
+      "location": "Campus Auditorium",
+      "time": "6 PM"
+    },
+    {
+      "id": "e2",
+      "day": "22",
+      "month": "APR",
+      "title": "Startup Pitch Night",
+      "location": "Virtual",
+      "time": "7 PM IST"
+    },
+    {
+      "id": "e3",
+      "day": "03",
+      "month": "MAY",
+      "title": "Tech Talk: AI in Fintech",
+      "location": "LH-101",
+      "time": "3 PM"
+    }
+  ],
+  "trendingHashtags": [
+    {
+      "tag": "#PlacementSeason2025",
+      "posts": "1.2k"
+    },
+    {
+      "tag": "#AlumniMeet2025",
+      "posts": "637"
+    },
+    {
+      "tag": "#StartupFounders",
+      "posts": "434"
+    },
+    {
+      "tag": "#MentorConnect",
+      "posts": "512"
+    },
+    {
+      "tag": "#LLMRoadmap",
+      "posts": "209"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "j1",
+      "icon": "💻",
+      "title": "Frontend Developer",
+      "company": "Razorpay",
+      "location": "Bangalore",
+      "jobType": "Full-time",
+      "description": "Build modern, responsive UIs for India's leading payments platform. React, TypeScript, and system design skills required.",
+      "tags": [
+        {
+          "label": "Full-time",
+          "type": "type"
+        },
+        {
+          "label": "Remote OK",
+          "type": "mode"
+        },
+        {
+          "label": "₹18-25 LPA",
+          "type": "salary"
+        }
+      ],
+      "postedBy": "Priya S."
+    },
+    {
+      "id": "j2",
+      "icon": "📱",
+      "title": "Product Intern",
+      "company": "CRED",
+      "location": "Mumbai",
+      "jobType": "Internship",
+      "description": "6-month internship with the product team. Work on real features used by 10M+ users. Pre-placement offer possible.",
+      "tags": [
+        {
+          "label": "Internship",
+          "type": "salary"
+        },
+        {
+          "label": "₹50K/mo",
+          "type": "type"
+        }
+      ],
+      "postedBy": "Karan M."
+    },
+    {
+      "id": "j3",
+      "icon": "🔧",
+      "title": "Backend Engineer",
+      "company": "Zepto",
+      "location": "Delhi NCR",
+      "jobType": "Full-time",
+      "description": "Design and build scalable microservices for fast-commerce. Java/Go expertise and distributed systems a big plus.",
+      "tags": [
+        {
+          "label": "Full-time",
+          "type": "type"
+        },
+        {
+          "label": "Hybrid",
+          "type": "mode"
+        },
+        {
+          "label": "₹20-30 LPA",
+          "type": "salary"
+        }
+      ],
+      "postedBy": "Rahul K."
+    },
+    {
+      "id": "j4",
+      "icon": "🤖",
+      "title": "ML Research Intern",
+      "company": "Sarvam AI",
+      "location": "Bangalore",
+      "jobType": "Internship",
+      "description": "Work on cutting-edge NLP and speech models for Indian languages. Strong Python and deep learning skills needed.",
+      "tags": [
+        {
+          "label": "Internship",
+          "type": "salary"
+        },
+        {
+          "label": "₹60K/mo",
+          "type": "type"
+        },
+        {
+          "label": "On-site",
+          "type": "mode"
+        }
+      ],
+      "postedBy": "Siddharth D."
+    },
+    {
+      "id": "j5",
+      "icon": "🎨",
+      "title": "UX Design Lead",
+      "company": "Groww",
+      "location": "Mumbai",
+      "jobType": "Full-time",
+      "description": "Lead a team of designers to create delightful experiences for 50M+ investors. Figma mastery required.",
+      "tags": [
+        {
+          "label": "Full-time",
+          "type": "type"
+        },
+        {
+          "label": "Hybrid",
+          "type": "mode"
+        },
+        {
+          "label": "₹22-32 LPA",
+          "type": "salary"
+        }
+      ],
+      "postedBy": "Riya P."
+    },
+    {
+      "id": "j6",
+      "icon": "📊",
+      "title": "Data Analyst",
+      "company": "PhonePe",
+      "location": "Pune",
+      "jobType": "Full-time",
+      "description": "Analyse transaction data and drive growth insights for 500M+ users. SQL, Python, and BI tools expertise needed.",
+      "tags": [
+        {
+          "label": "Full-time",
+          "type": "type"
+        },
+        {
+          "label": "Remote OK",
+          "type": "mode"
+        },
+        {
+          "label": "₹12-18 LPA",
+          "type": "salary"
+        }
+      ],
+      "postedBy": "Neha J."
+    }
+  ],
+  "networkStats": {
+    "totalAlumni": "12K",
+    "onlineNow": 47,
+    "responseRate": "89%"
+  },
+  "alumniDirectory": [
+    {
+      "id": "a1",
+      "avatar": "RK",
+      "avatarColor": "#1e40af",
+      "name": "Rahul Kapoor",
+      "role": "SDE @ Google",
+      "batch": "Batch 2019 · Bangalore",
+      "tags": [
+        "React",
+        "Node.js"
+      ]
+    },
+    {
+      "id": "a2",
+      "avatar": "PS",
+      "avatarColor": "#065f46",
+      "name": "Priya Sharma",
+      "role": "PM @ Razorpay",
+      "batch": "Batch 2018 · Mumbai",
+      "tags": [
+        "Product",
+        "Fintech"
+      ]
+    },
+    {
+      "id": "a3",
+      "avatar": "VN",
+      "avatarColor": "#7c3aed",
+      "name": "Vikram Nair",
+      "role": "CTO @ TechCorp",
+      "batch": "Batch 2014 · Delhi",
+      "tags": [
+        "Leadership",
+        "AI/ML"
+      ]
+    },
+    {
+      "id": "a4",
+      "avatar": "NJ",
+      "avatarColor": "#b45309",
+      "name": "Neha Joshi",
+      "role": "Sr. Data Scientist @ Meta",
+      "batch": "Batch 2020 · Hyderabad",
+      "tags": [
+        "Python",
+        "ML"
+      ]
+    },
+    {
+      "id": "a5",
+      "avatar": "KM",
+      "avatarColor": "#0369a1",
+      "name": "Karan Malhotra",
+      "role": "SDE-2 @ Amazon",
+      "batch": "Batch 2021 · Pune",
+      "tags": [
+        "Java",
+        "AWS"
+      ]
+    },
+    {
+      "id": "a6",
+      "avatar": "SD",
+      "avatarColor": "#0f766e",
+      "name": "Siddharth Das",
+      "role": "ML Engineer @ OpenAI",
+      "batch": "Batch 2019 · Remote",
+      "tags": [
+        "PyTorch",
+        "LLMs"
+      ]
+    },
+    {
+      "id": "a7",
+      "avatar": "RP",
+      "avatarColor": "#7c3aed",
+      "name": "Riya Patel",
+      "role": "UX Designer @ Figma",
+      "batch": "Batch 2021 · Remote",
+      "tags": [
+        "UI/UX",
+        "Figma"
+      ]
+    },
+    {
+      "id": "a8",
+      "avatar": "AR",
+      "avatarColor": "#1e3a8a",
+      "name": "Arjun Rao",
+      "role": "Founder @ StartupX",
+      "batch": "Batch 2017 · Bangalore",
+      "tags": [
+        "Startup",
+        "SaaS"
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "avatar": "RK",
+      "avatarColor": "#1e40af",
+      "name": "Rahul Kapoor",
+      "message": "sent you a referral for SDE-1 at Google. Check your email for next steps.",
+      "time": "2h ago",
+      "read": false
+    },
+    {
+      "id": "n2",
+      "avatar": "VN",
+      "avatarColor": "#7c3aed",
+      "name": "Vikram Nair",
+      "message": "accepted your mentorship request. Your first session is scheduled for Saturday 3 PM.",
+      "time": "3h ago",
+      "read": false
+    },
+    {
+      "id": "n3",
+      "avatar": "PS",
+      "avatarColor": "#065f46",
+      "name": "Priya Sharma",
+      "message": "commented on your post: \"Great work on AlumSync! This is exactly what the industry needs.\"",
+      "time": "5h ago",
+      "read": false
+    },
+    {
+      "id": "n4",
+      "avatar": "AS",
+      "avatarColor": "#4c1d95",
+      "name": "AlumSync",
+      "message": "— Annual Alumni Gala 2025 RSVP closes in 3 days. You haven't responded yet.",
+      "time": "1d ago",
+      "read": true
+    },
+    {
+      "id": "n5",
+      "avatar": "NJ",
+      "avatarColor": "#b45309",
+      "name": "Neha Joshi",
+      "message": "viewed your profile and sent a connection request.",
+      "time": "1d ago",
+      "read": true
+    },
+    {
+      "id": "n6",
+      "avatar": "KM",
+      "avatarColor": "#0369a1",
+      "name": "Karan Malhotra",
+      "message": "liked your post about AlumSync final year project.",
+      "time": "2d ago",
+      "read": true
+    },
+    {
+      "id": "n7",
+      "avatar": "SD",
+      "avatarColor": "#0f766e",
+      "name": "Siddharth Das",
+      "message": "shared your post — 47 new people have seen it.",
+      "time": "2d ago",
+      "read": true
+    },
+    {
+      "id": "n8",
+      "avatar": "AR",
+      "avatarColor": "#1e3a8a",
+      "name": "Arjun Rao",
+      "message": "— Your mentorship session notes from last week are available to review.",
+      "time": "3d ago",
+      "read": true
+    }
+  ],
+  "mentorStats": {
+    "activeMentors": 3,
+    "sessionsDone": 12,
+    "avgRating": 4.8,
+    "mentorsAvailable": "340+"
+  },
+  "mentors": [
+    {
+      "id": "m1",
+      "avatar": "VN",
+      "avatarColor": "#7c3aed",
+      "name": "Vikram Nair",
+      "role": "Chief Technology Officer @ TechCorp",
+      "batch": "Batch 2014 · 11 yrs exp",
+      "skills": [
+        "System Design",
+        "Leadership",
+        "AI/ML",
+        "Startups"
+      ],
+      "mentees": 48,
+      "rating": 4.9,
+      "availability": "2h/wk"
+    },
+    {
+      "id": "m2",
+      "avatar": "SK",
+      "avatarColor": "#065f46",
+      "name": "Swati Kaur",
+      "role": "Lead Product Manager @ Flipkart",
+      "batch": "Batch 2016 · 8 yrs exp",
+      "skills": [
+        "Product Strategy",
+        "A/B Testing",
+        "Growth"
+      ],
+      "mentees": 36,
+      "rating": 4.8,
+      "availability": "3h/wk"
+    },
+    {
+      "id": "m3",
+      "avatar": "AR",
+      "avatarColor": "#1e3a8a",
+      "name": "Arjun Rao",
+      "role": "Founder & CEO @ StartupX",
+      "batch": "Batch 2017 · 7 yrs exp",
+      "skills": [
+        "Entrepreneurship",
+        "Fundraising",
+        "SaaS"
+      ],
+      "mentees": 29,
+      "rating": 4.7,
+      "availability": "2h/wk"
+    },
+    {
+      "id": "m4",
+      "avatar": "NJ",
+      "avatarColor": "#b45309",
+      "name": "Neha Joshi",
+      "role": "Senior Data Scientist @ Meta",
+      "batch": "Batch 2020 · 4 yrs exp",
+      "skills": [
+        "Machine Learning",
+        "Python",
+        "Data Science"
+      ],
+      "mentees": 21,
+      "rating": 4.9,
+      "availability": "4h/wk"
+    }
+  ]
+}
