@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetchHealthStatus from "./services/apiClient";
+import {fetchHealthStatus} from "./services/apiClient";
 
 function App() {
   const [backendStatus, setBackendStatus] = useState("Connecting to backend...");
