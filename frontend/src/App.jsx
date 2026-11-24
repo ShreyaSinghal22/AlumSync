@@ -1,5 +1,10 @@
 ﻿import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
 
 import { ThemeProvider } from "./context/ThemeContext";
 import { UserProvider } from "./context/UserContext";
@@ -8,6 +13,7 @@ import Navbar from "./components/layout/Navbar";
 import Sidebar from "./components/layout/Sidebar";
 import BackendStatus from "./components/BackendStatus";
 
+import LandingPage from "./pages/LandingPage/LandingPage";
 import Home from "./pages/Home/Home";
 import Jobs from "./pages/Jobs/Jobs";
 import Network from "./pages/Network/Network";
@@ -22,57 +28,70 @@ const Placeholder = ({ title }) => (
   </div>
 );
 
-function App() {
+function DashboardLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  return (
+    <div className="min-h-screen bg-bg-main flex flex-col">
+      <Navbar
+        onToggleSidebar={() => setSidebarOpen((prev) => !prev)}
+      />
+
+      <BackendStatus />
+
+      <div className="flex-1 flex overflow-hidden">
+        <Sidebar
+          isOpen={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+        />
+
+        <div className="flex-1 min-w-0 overflow-hidden">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
   return (
     <ThemeProvider>
       <UserProvider>
         <Router>
-          <div className="min-h-screen bg-bg-main flex flex-col">
-            <Navbar
-              onToggleSidebar={() => setSidebarOpen((prev) => !prev)}
-            />
+          <Routes>
+            {/* Public landing page */}
+            <Route path="/" element={<LandingPage />} />
 
-            <BackendStatus />
+            {/* Existing dashboard layout and pages */}
+            <Route element={<DashboardLayout />}>
+              <Route path="/dashboard" element={<Home />} />
+              <Route path="/jobs" element={<Jobs />} />
+              <Route path="/network" element={<Network />} />
+              <Route path="/alerts" element={<Alerts />} />
+              <Route path="/mentor" element={<Mentor />} />
 
-            <div className="flex-1 flex overflow-hidden">
-              <Sidebar
-                isOpen={sidebarOpen}
-                onClose={() => setSidebarOpen(false)}
+              <Route
+                path="/messages"
+                element={<Placeholder title="Messages" />}
               />
-
-              <div className="flex-1 min-w-0 overflow-hidden">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/jobs" element={<Jobs />} />
-                  <Route path="/network" element={<Network />} />
-                  <Route path="/alerts" element={<Alerts />} />
-                  <Route path="/mentor" element={<Mentor />} />
-                  <Route
-                    path="/messages"
-                    element={<Placeholder title="Messages" />}
-                  />
-                  <Route
-                    path="/events"
-                    element={<Placeholder title="Events" />}
-                  />
-                  <Route
-                    path="/profile"
-                    element={<Placeholder title="Profile" />}
-                  />
-                  <Route
-                    path="/settings"
-                    element={<Placeholder title="Settings" />}
-                  />
-                  <Route
-                    path="*"
-                    element={<Placeholder title="404 — Not Found" />}
-                  />
-                </Routes>
-              </div>
-            </div>
-          </div>
+              <Route
+                path="/events"
+                element={<Placeholder title="Events" />}
+              />
+              <Route
+                path="/profile"
+                element={<Placeholder title="Profile" />}
+              />
+              <Route
+                path="/settings"
+                element={<Placeholder title="Settings" />}
+              />
+              <Route
+                path="*"
+                element={<Placeholder title="404 — Not Found" />}
+              />
+            </Route>
+          </Routes>
         </Router>
       </UserProvider>
     </ThemeProvider>

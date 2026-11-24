@@ -1,20 +1,31 @@
-import React, { useContext } from 'react';
+﻿import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
+import {
+  Home,
+  UserRound,
+  GraduationCap,
+  BriefcaseBusiness,
+  MessageCircle,
+  Handshake,
+  CalendarDays,
+  Bell,
+  Settings,
+} from 'lucide-react';
 
-// The only navigation in the app now — no top-header nav links.
+// The only navigation in the app now â€” no top-header nav links.
 // Alumni Map intentionally dropped per project decision; everything else from
 // the reference layout is here (Settings included, even with no page yet).
 const menuItems = [
-  { name: 'Home Feed', path: '/', icon: '🏠' },
-  { name: 'My Profile', path: '/profile', icon: '👤' },
-  { name: 'Alumni Directory', path: '/network', icon: '🎓' },
-  { name: 'Jobs & Internships', path: '/jobs', icon: '💼' },
-  { name: 'Messages', path: '/messages', icon: '💬', badge: 2 },
-  { name: 'Mentorship', path: '/mentor', icon: '🤝', badge: 3 },
-  { name: 'Events & Reunions', path: '/events', icon: '📅' },
-  { name: 'Alerts', path: '/alerts', icon: '🔔', dynamicBadge: true },
-  { name: 'Settings', path: '/settings', icon: '⚙️' },
+  { name: "Home Feed", path: "/dashboard", icon: Home },
+  { name: "My Profile", path: "/profile", icon: UserRound },
+  { name: "Alumni Directory", path: "/network", icon: GraduationCap },
+  { name: "Jobs & Internships", path: "/jobs", icon: BriefcaseBusiness },
+  { name: "Messages", path: "/messages", icon: MessageCircle, badge: 2 },
+  { name: "Mentorship", path: "/mentor", icon: Handshake, badge: 3 },
+  { name: "Events & Reunions", path: "/events", icon: CalendarDays },
+  { name: "Alerts", path: "/alerts", icon: Bell, dynamicBadge: true },
+  { name: "Settings", path: "/settings", icon: Settings },
 ];
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -80,7 +91,14 @@ const Sidebar = ({ isOpen, onClose }) => {
                 >
                   {({ isActive }) => (
                     <>
-                      <div className={`w-2 h-2 rounded-full transition-all ${isActive ? 'bg-primary-violet scale-110' : 'bg-border-subtle'}`}></div>
+                      <item.icon
+                        size={19}
+                        strokeWidth={1.8}
+                        className={`flex-shrink-0 transition-colors ${
+                          isActive ? 'text-primary-violet' : 'text-text-muted'
+                        }`}
+                      />
+
                       <span className="flex-1">{item.name}</span>
                       {!!badgeValue && (
                         <span className="bg-primary-violet text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
@@ -100,12 +118,12 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <>
-      {/* Desktop — persistent, always visible from md up */}
+      {/* Desktop â€” persistent, always visible from md up */}
       <aside className="hidden md:block md:w-[240px] md:flex-shrink-0 md:h-[calc(100vh-70px)] md:sticky md:top-[70px] md:overflow-y-auto no-scrollbar p-4">
         {renderContent()}
       </aside>
 
-      {/* Mobile — drawer, toggled by the hamburger button in Navbar */}
+      {/* Mobile â€” drawer, toggled by the hamburger button in Navbar */}
       {isOpen && (
         <>
           <div className="md:hidden fixed inset-0 bg-black/40 z-40" onClick={onClose} />
